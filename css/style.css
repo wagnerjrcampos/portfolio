@@ -16,6 +16,16 @@ body {
     margin: 0 auto;
 }
 
+/* Ligth mode */
+
+.dark-mode {
+    background-color: rgb(250, 250, 250);
+    color: white;
+}
+
+.ligth{
+    background-color: #f7f7f7;    
+}
 
 /* HEADER */
 
@@ -28,7 +38,7 @@ header {
 }
 
 header h1 {
-    color: #dc3545;
+    color: #310dffe7;
     font-size: 2.5rem;
 }
 
@@ -63,9 +73,18 @@ header .navegacao-primaria li a:hover::after {
     width: 100%;
     height: 0px;
     padding: 0px;
-    border-bottom: 4px solid #dc3545;
+    border-radius: 3px;
+    border-bottom: 4px solid #310dffe7;
 }
 
+lus{
+    margin-top: 120px;
+    display: grid;
+    gap: 30px;
+}
+div#lus h2{
+    color: rgb(119, 105, 105);
+}
 /* DOWLOAD CV SECAO */
 
 .section-div {
@@ -168,7 +187,7 @@ main .sobre{
 
 .sobre_titulo h1{
     font-size: 2.5rem;
-    color: #ff5d56;
+    color: #310dffe7;
     margin-bottom: 15px;
     font-family: 'Berkshire Swash', cursive;
 }
@@ -192,7 +211,7 @@ main .sobre{
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: #dc3545;
+    background-color: #707070;
 }
 
 .sobre img{
@@ -230,7 +249,7 @@ main .sobre{
 }
 
 .sobre_texto h1::after {
-    background-color: #ff5d56;
+    background-color: #310dffe7;
     height: 6px;
     width: 60px;
     margin: 20px 0;
@@ -255,7 +274,7 @@ main .sobre{
 }
 
 .sobre_info i {
-   color: #dc3545;
+   color: #ffffffe7;
    display: inline-block;
    padding-right: 15px;
     font-size: 1.3rem;
@@ -287,71 +306,6 @@ main .sobre{
     }
 }
 
-/* Responsivo */
-
-
-@media(max-width: 992px){
-
-    .section-div img {
-        display: none;
-    }
-
-    .section-div {
-        background-image: url(img/gif.gif);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    
-    header {
-        justify-content: space-between;
-        padding: 30px 58px;
-    }
-    header .navegacao-primaria{
-        display: none;
-    }
-
-    header i {
-        color: #f7f7f7;
-        font-size: 3rem;
-    }
-
-    header .navegacao-primaria.ativado {
-        background: linear-gradient(rgb(43, 42, 42, 0.176), rgba(46,46,46,0.724));
-        position: absolute;
-        display: grid;
-        top: 80px;
-        color: white;
-        z-index: 5;
-        padding: 15px;
-        font-size: 1.6rem;
-        font-weight: bold;
-        border-radius: 0 0 4px 4px;
-        right: 20px;
-        animation: abaixaSecao .9s ease-in-out forwards;
-    }
-
-    @keyframes abaixaSecao {
-        from {
-            transition: .5s;
-            top: 0px;
-        }
-    
-        to {
-            top: 83px;
-        }
-    }
-    
-
-    .sobre img {
-        grid-column: 1/-1;
-        justify-self: center;
-    }
-
-    .sobre_conteudo {
-        grid-column:1/-1;
-    }
-}
-
 /* SEÇÃO SERVICES */
 
 .services {
@@ -376,7 +330,7 @@ main .sobre{
     cursor: pointer;
     border-radius: 6px;
     position: relative;
-    padding: 10px;
+    padding: 6px;
     display: grid;
     gap: 30px;
     text-align: center;
@@ -388,11 +342,11 @@ main .sobre{
 
 .my_services ul li i {
     font-size: 2.7rem;
-    color: #dc3545;
+    color: #aba9b4e7;
 }
 
 .my_services ul li h3 {
-    color: #fff;
+    color: #e0e0e0;
     font-size: 1.6rem;
     font-family: 'poppins';
     font-weight: 500;
@@ -432,17 +386,16 @@ main .sobre{
 .my_services li:hover::before {
     width: 100%;
     height: 100%;
-    border-top: 2px solid red;
-    border-right: 2px solid red;
+    border-top: 2px solid #310dffe7;
+    border-right: 2px solid #310dffe7;
 }
 
 .my_services li:hover::after {
     width: 100%;
     height: 100%;
-    border-bottom: 2px solid red;
-    border-left: 2px solid red;
+    border-bottom: 2px solid #310dffe7;
+    border-left: 2px solid #310dffe7;
 }
-
 /* Experiencie */
 
 .my_resume{
@@ -461,7 +414,7 @@ main .sobre{
 .resume_generica h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
-    background-color: #ff5d56;
+    background-color: #310dffe7;
     justify-self: start;
     padding: 10px;
     border-radius: 3px;
@@ -485,7 +438,7 @@ main .sobre{
 }
 
 .experience_content ul {
-    color: #ff5d56;
+    color: #310dffe7;
     gap: 10px;
     display: flex;
     cursor: pointer;
@@ -519,7 +472,7 @@ main .sobre{
 }
 
 .resume_generica .experience_content div span{
-    color: #dc3545;
+    color: #310dffe7;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
 }
@@ -554,14 +507,14 @@ main .sobre{
     padding: 10px 30px;
     border-radius: 3px;
     text-transform: uppercase;
-    background-color: #ff5d56;
+    background-color: #310dffe7;
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 30px;
     justify-self: start;
 }
 
-.my_skills h2 i{
+/*.my_skills h2 i{
     padding-right: 10px;
 }
 
@@ -580,12 +533,12 @@ main .sobre{
 
 .skill_content ul {
     display: flex;
-}
+}*/
 
 /* Fun Facts */
 
 .funfacts {
-    grid-column: 3/-1;
+    grid-column: 1/2;
     grid-row: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -594,9 +547,9 @@ main .sobre{
 .funfacts h2{
     grid-column: 1/-1;
     padding: 10px 30px;
-    border-radius: 3px;
+    border-radius: 6px;
     text-transform: uppercase;
-    background-color: #ff5d56;
+    background-color: #707070;
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 30px;
@@ -610,8 +563,7 @@ main .sobre{
 .funfacts ul{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    
+    gap: 30px;   
 }
 
 .funfacts ul li{
@@ -630,7 +582,7 @@ main .sobre{
     margin: auto;
     padding: 20px;
     font-size: 2rem;
-    color: #ff5d56;
+    color: #707070;
     border-right: 2px solid #3e3d3d;
 }
 
@@ -783,7 +735,7 @@ main .sobre{
         display: none;
     }
     .section-div{
-        background-image: url(../img/ilustrativa.png);
+        background-image: url(../img/gif.gif);
         background-repeat: no-repeat;
         background-size: cover;
         

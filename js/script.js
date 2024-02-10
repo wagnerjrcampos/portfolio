@@ -1,3 +1,4 @@
+//Digitando
 function writeTitle(){
     function activeWorld(element){
         const arrText = element.innerHTML.split('');
@@ -14,6 +15,8 @@ function writeTitle(){
 
 writeTitle();
 
+//Menu Mobile
+
 function menuMobile(){
     const activeMenu = document.querySelector('.fa-bars');
     const navMenu = document.querySelector('header .navegacao-primaria');
@@ -27,6 +30,8 @@ function menuMobile(){
 }
 
 menuMobile();
+
+
 
 function aboutMe(){
     const divExperience = document.querySelectorAll('.experience_content div'); 
