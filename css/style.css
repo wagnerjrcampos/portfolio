@@ -274,9 +274,9 @@ main .sobre{
 }
 
 .sobre_info i {
-   color: #ffffffe7;
-   display: inline-block;
-   padding-right: 15px;
+    color: #ffffffe7;
+    display: inline-block;
+    padding-right: 15px;
     font-size: 1.3rem;
 }
 
@@ -664,6 +664,7 @@ main .sobre{
     padding: 20px 40px;
     border: 1px solid #333;
     color: #707070;
+    border-radius: 30px;
 }
 
 @keyframes animationImageButtom{
@@ -735,7 +736,6 @@ main .sobre{
         display: none;
     }
     .section-div{
-        background-image: url(../img/gif.gif);
         background-repeat: no-repeat;
         background-size: cover;
         
@@ -776,5 +776,97 @@ main .sobre{
     }
     .sobre_conteudo{
         grid-column: 1/-1;
+    }
+}
+
+
+
+@media (max-width: 480px){
+    .section-div img {
+        display: none;
+    }
+    .section-div{
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    main .sobre {
+        background-color: black;
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        justify-content: center;
+        padding: 40px;
+    }
+    .projects {
+        padding: 30px;
+        /* display: grid; */
+        /* justify-content: center; */
+        /* gap: 30px; */
+        background-color: #000000;
+    }
+    .projects ul {
+        display: flex;
+        justify-content: center;
+        gap: 2px;
+    }
+    .sobre_titulo p {
+        color: #707070;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+    .services {
+        margin-top: 30px;
+        padding: 60px;
+        background-color: #000000;
+    }
+    .services {
+        margin-top: 30px;
+        padding: 60px;
+        background-color: #000000;
+        display: inline;
+    }
+    #link {
+        background-color: #222;
+        text-decoration: none;
+        justify-self: center;
+        padding: 10px 25px;
+        border: 1px solid #333;
+        border-radius: 30px;
+        color: #707070;
+    }
+    header .navegacao-primaria{
+        display: none;
+    }
+
+    header {
+        justify-content: space-between;
+        padding: 30px 70px;
+    }
+
+    header i{
+        color:#f7f7f7;
+        font-size: 2rem;
+    }
+
+    header .navegacao-primaria.ativado{
+        background: linear-gradient(rgba(43, 42, 42, 0.176), rgba(46, 46, 46, 0.724));
+        position: absolute;
+        display: grid;
+        top: 80px;
+        color: white;
+        z-index: 1;
+        padding: 30px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        border-radius: 0 0 4px 4px;
+        right: 20px;
+        animation: upSection .8s ease-in-out forwards;
+    }
+    .funfacts ul {
+        display: grid;
+        grid-template-columns: 0;
+        gap: 30px;
     }
 }
