@@ -16,17 +16,6 @@ body {
     margin: 0 auto;
 }
 
-/* Ligth mode */
-
-.dark-mode {
-    background-color: rgb(250, 250, 250);
-    color: white;
-}
-
-.ligth{
-    background-color: #f7f7f7;    
-}
-
 /* HEADER */
 
 header {
@@ -82,9 +71,72 @@ lus{
     display: grid;
     gap: 30px;
 }
+
 div#lus h2{
     color: rgb(119, 105, 105);
 }
+
+/* slide */
+
+.slider {
+    display: block;
+    height: 293px;
+    width: 600px;
+    margin: 40px;
+    margin-top: 0px;
+    position: relative;
+}
+
+.slider li {
+    list-style: none;
+    position: absolute;
+}
+
+.slider img {
+    margin: auto;
+    height: 100%;
+    width:  100%;
+    vertical-align: top;
+}
+
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider label {
+    background-color: #0c04e1;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+}
+
+.slider li:nth-child(1) label {
+    left: 10px;
+}
+
+.slider li:nth-child(2) label {
+    left: 40px;
+}
+
+.slider li:nth-child(3) label {
+    left: 70px;
+}
+
 /* DOWLOAD CV SECAO */
 
 .section-div {
@@ -106,6 +158,12 @@ div#lus h2{
 }
 
 .section-div div h2 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: #f7f7f7;
+}
+
+.section-div div h3 {
     font-family: 'Poppins';
     font-weight: 600;
     color: #f7f7f7;
@@ -776,97 +834,5 @@ main .sobre{
     }
     .sobre_conteudo{
         grid-column: 1/-1;
-    }
-}
-
-
-
-@media (max-width: 480px){
-    .section-div img {
-        display: none;
-    }
-    .section-div{
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    main .sobre {
-        background-color: black;
-        margin-top: 60px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 30px;
-        justify-content: center;
-        padding: 40px;
-    }
-    .projects {
-        padding: 30px;
-        /* display: grid; */
-        /* justify-content: center; */
-        /* gap: 30px; */
-        background-color: #000000;
-    }
-    .projects ul {
-        display: flex;
-        justify-content: center;
-        gap: 2px;
-    }
-    .sobre_titulo p {
-        color: #707070;
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-        position: relative;
-    }
-    .services {
-        margin-top: 30px;
-        padding: 60px;
-        background-color: #000000;
-    }
-    .services {
-        margin-top: 30px;
-        padding: 60px;
-        background-color: #000000;
-        display: inline;
-    }
-    #link {
-        background-color: #222;
-        text-decoration: none;
-        justify-self: center;
-        padding: 10px 25px;
-        border: 1px solid #333;
-        border-radius: 30px;
-        color: #707070;
-    }
-    header .navegacao-primaria{
-        display: none;
-    }
-
-    header {
-        justify-content: space-between;
-        padding: 30px 70px;
-    }
-
-    header i{
-        color:#f7f7f7;
-        font-size: 2rem;
-    }
-
-    header .navegacao-primaria.ativado{
-        background: linear-gradient(rgba(43, 42, 42, 0.176), rgba(46, 46, 46, 0.724));
-        position: absolute;
-        display: grid;
-        top: 80px;
-        color: white;
-        z-index: 1;
-        padding: 30px;
-        font-size: 1.3rem;
-        font-weight: bold;
-        border-radius: 0 0 4px 4px;
-        right: 20px;
-        animation: upSection .8s ease-in-out forwards;
-    }
-    .funfacts ul {
-        display: grid;
-        grid-template-columns: 0;
-        gap: 30px;
     }
 }

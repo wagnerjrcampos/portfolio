@@ -1,12 +1,12 @@
 //Digitando
-function writeTitle(){
+/*function writeTitle(){
     function activeWorld(element){
         const arrText = element.innerHTML.split('');
         element.innerHTML = '';
         arrText.forEach((letra, i) =>{
             setTimeout(()=>{
                 element.innerHTML += letra;
-            }, 75 * i);
+            }, 10 * i);
         })
     }
     const title = document.querySelector('.digitando');
@@ -14,6 +14,7 @@ function writeTitle(){
 }
 
 writeTitle();
+*/
 
 //Menu Mobile
 
@@ -150,3 +151,18 @@ buttomGeral.forEach((item)=>{
         }
     })
 })
+
+function carregar()
+{
+    let saudacao = window.document.getElementById('saudacao');
+    let day      = new Date();
+    let hora     = day.getHours();
+
+    if (hora >= 0 && hora < 12) {
+        saudacao.innerHTML = `Hello Good Morning`;
+    } else if (hora >= 12 && hora < 18 ) {
+        saudacao.innerHTML = `Hello Good Afternoon`
+    } else {
+        saudacao.innerHTML = `Hello Good Evening`
+    }
+}
