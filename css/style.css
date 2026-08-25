@@ -3,8 +3,8 @@
 	--surface: #ffffff;
 	--text-primary: #1a1b23;
 	--text-secondary: #5b5f73;
-	--accent-blue: #378add;
-	--accent-blue-hover: #2c6fb0;
+	--accent-blue: #2c6fb0;
+	--accent-blue-hover: #1f5586;
 	--accent-purple: #534ab7;
 	--border: #e4e7f0;
 	--shadow-soft: 0 4px 20px rgba(20, 20, 30, 0.06);
@@ -144,11 +144,20 @@ h3 {
 @media (max-width: 767px) {
 	.nav-toggle {
 		display: flex;
+		flex-shrink: 0;
 	}
 
 	.site-nav {
 		display: none;
-		width: 100%;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background: var(--surface);
+		border-top: 1px solid var(--border);
+		box-shadow: var(--shadow-soft);
+		max-height: calc(100vh - 100%);
+		overflow-y: auto;
 	}
 
 	.site-nav.is-open {
@@ -158,7 +167,7 @@ h3 {
 	.site-nav ul {
 		flex-direction: column;
 		gap: 0;
-		padding-bottom: 1rem;
+		padding: 0 1.25rem 1rem;
 	}
 
 	.site-nav li {
