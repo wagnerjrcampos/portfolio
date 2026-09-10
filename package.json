@@ -1,13 +1,14 @@
 {
 	"name": "portfolio",
 	"version": "1.0.0",
+	"private": true,
 	"description": "Portfolio pessoal (HTML/CSS/JS puro)",
-	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"lint": "biome lint .",
 		"format": "biome format --write .",
-		"check": "biome check --write ."
+		"check": "biome check --write .",
+		"ci": "biome check ."
 	},
 	"repository": {
 		"type": "git",
@@ -16,7 +17,6 @@
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"type": "commonjs",
 	"bugs": {
 		"url": "https://github.com/wagnerjrcampos/portfolio/issues"
 	},
